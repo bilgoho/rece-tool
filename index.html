@@ -93,9 +93,16 @@
                         <span>总行数: <strong id="totalRows" class="text-slate-800">0</strong></span>
                         <span>总金额: <strong id="totalAmount" class="text-blue-600 text-base">¥0.00</strong></span>
                     </div>
-                    <button onclick="clearAllRows()" class="text-slate-400 hover:text-rose-600 transition text-xs flex items-center gap-1">
-                        🗑️ 清空当前工作台
-                    </button>
+                    <!-- 优化后的右侧按钮组：将新增行按钮与清空按钮并列展示 -->
+                    <div class="flex items-center gap-3">
+                        <button onclick="addRow()" class="text-blue-600 hover:text-blue-800 transition text-xs font-semibold flex items-center gap-1 py-1 px-2 rounded hover:bg-blue-50">
+                            ➕ 添加核算行
+                        </button>
+                        <span class="text-slate-200 select-none">|</span>
+                        <button onclick="clearAllRows()" class="text-slate-400 hover:text-rose-600 transition text-xs flex items-center gap-1 py-1 px-2 rounded hover:bg-rose-50">
+                            🗑️ 清空当前工作台
+                        </button>
+                    </div>
                 </div>
             </div>
 
